@@ -1,5 +1,5 @@
 # Video-Synchronization-with-Trodes-DIO-signals
-Python module to find the start and end points of the video recording using the Trodes DIO signals corresponding to the LED on and off blinking states along with a method to check video alignment.   
+Python module to extract the video signals between the start and end points of the recording session using the Trodes DIO signals corresponding to the LED on and off blinking states, along with a method to check video alignment.   
 
 ## Python Packages to be installed
 * [pytesseract](https://pypi.org/project/pytesseract/) - Download [Tesseract OCR ](https://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-w64-setup-v5.0.0-alpha.20201127.exe) , complete the setup and **take note of the complete path to tesseract.exe in Tesseract-OCR folder**.
@@ -16,4 +16,4 @@ Python module to find the start and end points of the video recording using the 
 * Get the closest timestamp to the query timestamp from a list of timestamps. (*closest_ts*)
 * Get the instances when there is a match and mismatch between the LED states in video and DIO signals at the closest timestamp. (*find_mismatch*) 
 
-[**check_video_alignment.py**](https://github.com/Muthu-Jeyanthi/Video-Synchronization-with-Trodes-DIO-signals/blob/main/check_video_alignment.py)  computes the first and last timestamps from the Trodes DIO signals and utilizes the video_sync functions to obtain the video timestamps and states along with the match and mismatch. 
+[**check_video_alignment.py**](https://github.com/Muthu-Jeyanthi/Video-Synchronization-with-Trodes-DIO-signals/blob/main/check_video_alignment.py)  computes the first and last timestamps from the Trodes DIO signals and utilizes the video_sync functions to obtain the video timestamps and states along with the match and mismatch. **Run this script only after replacing the .dat file path (*dio_fname , line 17*), .mp4 video (*video_loc, line 37*) file path in check_video_alignment.py and tesseract.exe file path (*pytesseract.pytesseract.tesseract_cmd , line 20*) in video_sync_functions.py** 
