@@ -15,5 +15,14 @@ Python module to extract the video signals between the start and end points of t
 * Get video timestamps with corresponding LED states from each frame during the same time interval of Trodes recording. (*video_metadata*)
 * Get the closest timestamp to the query timestamp from a list of timestamps. (*closest_ts*)
 * Get the instances when there is a match and mismatch between the LED states in video and DIO signals at the closest timestamp. (*find_mismatch*) 
+* Get the best lags for each segment in the dataframe. (*get_best_lags*)
+* Calculate cross correlation. (*crosscorr*)
+* Caculate and visualize Windowed Time Lagged Cross Correlation (WTLCC) (*WTLCC*)
+* Get final Timestamps and frames info corresponding to DIO signal. (*get_sync_video_df*)
+* Get dataframe with timestamps of when the LED states changed. (*get_state_change_ts*)
 
 [**check_video_alignment.py**](https://github.com/Muthu-Jeyanthi/Video-Synchronization-with-Trodes-DIO-signals/blob/main/check_video_alignment.py)  computes the first and last timestamps from the Trodes DIO signals and utilizes the video_sync functions to obtain the video timestamps and states along with the match and mismatch. **Run this script only after replacing the .dat file path (*dio_fname , line 17*), .mp4 video (*video_loc, line 37*) file path in check_video_alignment.py and tesseract.exe file path (*pytesseract.pytesseract.tesseract_cmd , line 20*) in video_sync_functions.py** 
+
+[**check_video_alignment.py**]()
+utilizes functions from video_sync_functions.py to calculate and apply lags to individual cameras. A combined dataframe of all eyes info is created and used as input to stitch the frames together as a single video. 
+
