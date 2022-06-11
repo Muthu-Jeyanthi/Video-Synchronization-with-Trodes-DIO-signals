@@ -23,6 +23,6 @@ Python module to extract the video signals between the start and end points of t
 
 [**check_video_alignment.py**](https://github.com/Muthu-Jeyanthi/Video-Synchronization-with-Trodes-DIO-signals/blob/main/check_video_alignment.py)  computes the first and last timestamps from the Trodes DIO signals and utilizes the video_sync functions to obtain the video timestamps and states along with the match and mismatch. **Run this script only after replacing the .dat file path (*dio_fname , line 17*), .mp4 video (*video_loc, line 37*) file path in check_video_alignment.py and tesseract.exe file path (*pytesseract.pytesseract.tesseract_cmd , line 20*) in video_sync_functions.py** 
 
-[**check_video_alignment.py**]()
+[**Resampled_df_processing.py**](https://github.com/Muthu-Jeyanthi/Video-Synchronization-with-Trodes-DIO-signals/blob/main/Resampled_df_processing.py)
 utilizes functions from video_sync_functions.py to calculate and apply lags to individual cameras. A combined dataframe of all eyes info is created and used as input to stitch the frames together as a single video. 
 
