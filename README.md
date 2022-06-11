@@ -1,5 +1,5 @@
 # Video-Synchronization-with-Trodes-DIO-signals
-Python module to extract the video signals between the start and end points of the recording session using the Trodes DIO signals corresponding to the LED on and off blinking states, along with a method to check video alignment.   
+Python scripts to extract the video signals between the start and end points of the recording session using the Trodes DIO signals corresponding to the LED on and off blinking states, along with a method to check video alignment.   
 
 ## Python Packages to be installed
 * [pytesseract](https://pypi.org/project/pytesseract/) - Download [Tesseract OCR ](https://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-w64-setup-v5.0.0-alpha.20201127.exe) , complete the setup and **take note of the complete path to tesseract.exe in Tesseract-OCR folder**.
